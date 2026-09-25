@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Voting for Movies</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Online Voting for Movies</h1>
+        <h3>Developed by ShemCarlo@.</h3>
+
+        <button class="refresh" onclick="refreshPage()">
+            Refresh
+        </button>
+
+        <label>Enter Your Name:</label>
+
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label class="movies-title">
+            Movies:
+        </label>
+
+        <div class="movies">
+
+            <label>
+                <input type="radio" name="movie" value="Kraven">
+                Kraven
+            </label>
+
+            <label>
+                <input type="radio" name="movie" value="Red Notice">
+                Red Notice
+            </label>
+
+            <label>
+                <input type="radio" name="movie" value="Black_Panther_Wakanda">
+                Black_Panther_Wakanda
+            </label>
+
+        </div>
+
+        <button class="vote" onclick="vote()">
+            Vote
+        </button>
+
+        <!-- OWNER LOGIN -->
+        <div class="admin-section">
+
+            <h2>Owner / Admin</h2>
+
+            <input
+                type="password"
+                id="adminPassword"
+                placeholder="Enter owner password"
+            >
+
+            <button class="admin-login" onclick="adminLogin()">
+                Owner Login
+            </button>
+
+        </div>
+
+        <!-- THIS IS HIDDEN AT FIRST -->
+        <div id="adminPanel" style="display: none;">
+
+            <button class="calculate" onclick="calculateVotes()">
+                Calculate Votes
+            </button>
+
+            <hr>
+
+            <div id="result"></div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
